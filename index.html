@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.cdnfonts.com/css/nats?styles=20027"
+            rel="stylesheet" />
+
+        <link rel="stylesheet" href="./css/main.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+        <title>Ficha de Cadastro</title>
+
+        <style>
+            @media print {
+                /* Força a impressão exata de cores e fundos */
+                * {
+                    -webkit-print-color-adjust: exact !important;
+                    color-adjust: exact !important;
+                    print-color-adjust: exact !important;
+                }
+
+                /* Obriga os navegadores a desenharem as linhas dos campos */
+                input, select, textarea {
+                    border: 1px solid #000000 !important;
+                    appearance: none !important;
+                    -moz-appearance: none !important;
+                    background-color: transparent !important;
+                    box-shadow: none !important;
+                    border-radius: 0 !important;
+                    color: #000000 !important;
+                }
+
+                /* Garante que as bordas dos blocos (fieldset) não sumam */
+                .border-box {
+                    border: 1px solid #000000 !important;
+                }
+
+                /* Garante que a linha preta do título apareça */
+                .line {
+                    background-color: #000000 !important;
+                }
+            }
+        </style>
+    <base target="_blank">
+</head>
+    <body>
+        <section class="s-form">
+            <div class="container">
+                <div class="title-form border-box">
+                    <div class="line"></div>
+                    <h1>FICHA DE CADASTRO E ANÁLISE DE CRÉDITO</h1>
+                </div>
+                <form action="">
+                    <fieldset class="reason-section border-box">
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <label for="data">DATA DA SOLICITAÇÃO</label>
+                                <input
+                                    type="text"
+                                    name="data"
+                                    id="datepicker"
+                                    disabled />
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="titulo-01">SUPERVISOR</label>
+                                <input
+                                    type="text"
+                                    name="titulo-01"
+                                    value="DANIEL DUARTE"
+                                    readonly />
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <label for="titulo-02">REPRESENTANTE</label>
+                                <select name="titulo-02">
+                                    <option value="" selected disabled>
+                                        SELECIONE
+                                    </option>
+                                    <option value="opt1">
+                                        ALBERTO GORAYEB (101)
+                                    </option>
+                                    <option value="opt11">
+                                        ALEX DUARTE (122)
+                                    </option>
+                                    <option value="opt12">
+                                        ANTONIO RODRIGUES (126)
+                                    </option>
+                                    <option value="opt15">
+                                        ARY CRUZ (128)
+                                    </option>
+                                    <option value="opt17">
+                                        EDUARDO CORREIA (103)
+                                    </option>
+                                    <option value="opt9">
+                                        KELMANN BASTOS (115)
+                                    </option>
+                                    <option value="opt16">
+                                        MAGNO OLIVEIRA (138)
+                                    </option>
+                                    <option value="opt10">
+                                        NELIDA CRUZ (134)
+                                    </option>
+                                    <option value="opt8">
+                                        NILTON SOUSA (114)
+                                    </option>
+                                    <option value="opt20">
+                                        VENDA DIRETA (998)
+                                    </option>
+                                    <option value="opt21">
+                                        PAULO ANDRADE (107)
+                                    </option>
+                                    <option value="opt22">
+                                        VITOR LIMA (144)
+                                    </option> 
+                                    <option value="opt23">
+                                        EDANIELA SANTOS (145)
+                                    </option>       
+                                </select>
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="motivo"
+                                    >MOTIVO DA SOLICITAÇÃO</label
+                                >
+                                <select name="motivo" id="select-motivo">
+                                    <option value="" selected disabled>
+                                        SELECIONE O MOTIVO
+                                    </option>
+                                    <option value="opt1">NOVO CLIENTE</option>
+                                    <option value="opt2">
+                                        AUMENTO DE LIMITE
+                                    </option>
+                                    <option value="opt3">
+                                        COND. DE PAGAMENTO
+                                    </option>
+                                    <option value="opt4">
+                                        TRANSFERÊNCIA DE CNPJ
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="info-section border-box">
+                        <div class="info-head">
+                            <h3>INFORMAÇÕES DO CLIENTE</h3>
+                            <div class="input-wrapper">
+                                <label for="cod">COD:</label>
+                                <input type="text" name="cod" placeholder="" />
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-wrapper mr-32">
+                                <label for="titulo-03">RAZÃO SOCIAL</label>
+                                <input
+                                    type="text"
+                                    name="titulo-03"
+                                    placeholder=""
+                                    required />
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="titulo-04">NOME FANTASIA</label>
+                                <input
+                                    type="text"
+                                    name="titulo-04"
+                                    placeholder=""
+                                    required />
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-wrapper mr-32 large">
+                                <label for="endereco">ENDEREÇO</label>
+                                <input
+                                    type="text"
+                                    name="endereco"
+                                    placeholder=""
+                                    required />
+                            </div>
+                            <div class="input-group">
+                                <div class="input-wrapper mr-16">
+                                    <label for="cep">CEP</label>
+                                    <input
+                                        type="text"
+                                        name="cep"
+                                        placeholder=""
+                                        oninput="formatarCEP(this)"
+                                        maxlength="10"
+                                        required />
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="bairro">Bairro</label>
+                                    <input
+                                        type="text"
+                                        name="bairro"
+                                        placeholder=""
+                                        required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-wrapper mr-57">
+                                <label for="cnpj">CNPJ</label>
+                                <input
+                                    type="text"
+                                    name="cnpj"
+                                    placeholder=""
+                                    maxlength="18"
+                                    oninput="formatarCNPJ(this)"
+                                    required />
+                            </div>
+                            <div class="input-wrapper mr-57">
+                                <label for="data-empresa"
+                                    >DATA DE ABERTURA</label
+                                >
+                                <input
+                                    type="text"
+                                    name="data-empresa"
+                                    id="datepicker-02" />
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="cidade">cidade</label>
+                                <input
+                                    type="text"
+                                    name="cidade"
+                                    placeholder=""
+                                    required />
+                            </div>
+                        </div>
+                        <div class="four-columns">
+                            <div class="input-group">
+                                <div class="input-wrapper">
+                                    <label for="contato">responsável</label>
+                                    <input
+                                        type="text"
+                                        name="contato"
+                                        placeholder=""
+                                        required />
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="telefone">telefone</label>
+                                    <input
+                                        type="number"
+                                        name="telefone"
+                                        placeholder="" />
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-wrapper">
+                                    <label for="titulo-05">RAMO</label>
+                                    <input
+                                        type="text"
+                                        name="titulo-05"
+                                        id="ramo-input"
+                                        list="ramos"
+                                        placeholder="SELECIONE OU DIGITE O RAMO"
+                                        autocomplete="off"
+                                        required />
+                                    <datalist id="ramos">
+                                        <option value="18. BAR/BARRACA/BODEGA/ESPETINHO/PUB/TABERNA"></option>
+                                        <option value="17. BUFFET/CATERING"></option>
+                                        <option value="16. CASA DE FRIOS"></option>
+                                        <option value="15. CASA DE SHOWS/CINEMA/TEATRO"></option>
+                                        <option value="14. CPF"></option>
+                                        <option value="13. RESTAURANTE/CHURRASCARIA/PIZZARIA"></option>
+                                        <option value="12. CAFETERIA/CONVENIÊNCIA/PADARIA"></option>
+                                        <option value="11. LANCHONETE/PASTELARIA/QUIOSQUE"></option>
+                                        <option value="10. DELICATESSEN"></option>
+                                        <option value="9. EMPÓRIOS"></option>
+                                        <option value="8. HORTIFRUTI"></option>
+                                        <option value="7. HIPERMERCADOS"></option>
+                                        <option value="6. SUPERMERCADOS"></option>
+                                        <option value="5. MERCADOS MÉDIOS"></option>
+                                        <option value="4. MERCADINHOS/MERCEARIA"></option>
+                                        <option value="3. ALBERGUE/FLAT/HOTEIS/POUSADAS"></option>
+                                        <option value="2. ARMAZÉM"></option>
+                                        <option value="1. ATACADOS"></option>
+                                    </datalist>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="title-01-section border-box">
+                        <div class="info-head">
+                            <h3>SUGESTÃO DE CRÉDITO</h3>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-wrapper mr-32">
+                                <label for="titulo-07"
+                                    >SUGESTÃO DE LIMITE</label
+                                >
+                                <input
+                                    type="number"
+                                    name="titulo-07"
+                                    placeholder="" />
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="titulo-09">SUGESTÃO DE PRAZO</label>
+                                <select name="titulo-09">
+                                    <option value="" selected disabled>
+                                        SELECIONE
+                                    </option>
+                                    <option value="opt10">
+                                        30. ANTECIPADO
+                                    </option>
+                                    <option value="opt1">1. A VISTA</option>
+                                    <option value="opt2">
+                                        3. BOLETO 7 DIAS
+                                    </option>
+                                    <option value="opt3">
+                                        4. BOLETO 7/14 DIAS
+                                    </option>
+                                    <option value="opt4">
+                                        6. BOLETO 14 DIAS
+                                    </option>
+                                    <option value="opt5">
+                                        7. BOLETO 14/21 DIAS
+                                    </option>
+                                    <option value="opt6">
+                                        9. BOLETO 21 DIAS
+                                    </option>
+                                    <option value="opt7">
+                                        29. BOLETO 21/28 DIAS
+                                    </option>
+                                    <option value="opt13">
+                                        12. BOLETO 28 DIAS
+                                    </option>
+                                    <option value="opt11">
+                                        8. BOLETO 7/14/21 DIAS
+                                    </option>
+                                    <option value="opt12">
+                                        13. BOLETO 14/21/28 DIAS
+                                    </option>
+                                    <option value="opt8">22. PIX 7 DIAS</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="two-columns">
+                        <fieldset class="title-02-section border-box">
+                            <div class="info-head">
+                                <div class="input-wrapper">
+                                    <label for="titulo-10">DATA</label>
+                                    <input type="text" name="titulo-10" />
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-wrapper">
+                                    <label for="titulo-11"
+                                        >MÉDIA DE COMPRAS</label
+                                    >
+                                    <input type="text" name="titulo-11" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="titulo-12"
+                                        >MÉDIA DE ATRASOS</label
+                                    >
+                                    <input type="text" name="titulo-12" />
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="title-03-section border-box">
+                            <div class="info-head">
+                                <h3>FINANCEIRO</h3>
+                                <div class="input-wrapper">
+                                    <label for="titulo-13">DATA:</label>
+                                    <input type="text" name="titulo-13" />
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-wrapper mr-16">
+                                    <label for="titulo-14">APROVADO</label>
+                                    <div class="btn-area">
+                                        <button
+                                            type="button"
+                                            class="toggle-button"
+                                            data-value="sim">
+                                            SIM
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="toggle-button"
+                                            data-value="nao">
+                                            NÃO
+                                        </button>
+                                    </div>
+                                    <input
+                                        type="hidden"
+                                        id="opcao"
+                                        name="opcao" />
+                                </div>
+                                <div class="input-wrapper mr-16">
+                                    <label for="titulo-15"
+                                        >LIMITE APROVADO</label
+                                    >
+                                    <input type="text" name="titulo-15" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="titulo-16"
+                                        >PRAZO APROVADO</label
+                                    >
+                                    <input type="text" name="titulo-16" />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <fieldset class="parecer-section">
+                        <h3>PARECER DO CRÉDITO</h3>
+                        <textarea
+                            id="text"
+                            name="text"
+                            rows="4"
+                            style="
+                                overflow: hidden;
+                                word-wrap: break-word;
+                                resize: none;
+                            "></textarea>
+                    </fieldset>
+                    <fieldset class="assignature-section">
+                        <div class="assignature-wrapper">
+                            <div class="assignature">
+                                <label for="gerencia-comercial"
+                                    >GERÊNCIA COMERCIAL</label
+                                >
+                                <input type="text" name="gerencia-comercial" />
+                            </div>
+                            <div class="assignature">
+                                <label for="gerencia-financeira"
+                                    >GERÊNCIA FINANCEIRA</label
+                                >
+                                <input type="text" name="gerencia-financeira" />
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <p class="warning">
+                    Obs: Aprovação sujeita a análise de crédito. Nos reservamos
+                    o direito de solicitar mais informações ou documentos se
+                    necessário, afim de buscar melhor qualidade e fornecer
+                    condições de agilidade na resposta e segurança na concessão
+                    do crédito.
+                </p>
+            </div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
