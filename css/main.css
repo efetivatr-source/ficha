@@ -657,11 +657,11 @@ button {
 
 @media screen and (max-width: 360px) {
     .info-section .info-head .cod-group {
-        gap: var(--gap-xs);
+        gap: var(--gap-md);
     }
 
     .info-section .info-head .cod-group input {
-        width: 6rem;
+        width: 8rem;
     }
 }
 
