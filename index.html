@@ -24,7 +24,9 @@
                 }
 
                 /* Obriga os navegadores a desenharem as linhas dos campos */
-                input, select, textarea {
+                input,
+                select,
+                textarea {
                     border: 1px solid #000000 !important;
                     appearance: none !important;
                     -moz-appearance: none !important;
@@ -32,6 +34,22 @@
                     box-shadow: none !important;
                     border-radius: 0 !important;
                     color: #000000 !important;
+                }
+
+                /* EXCEÇÃO: campos de assinatura devem ter apenas linha inferior */
+                .s-form
+                    .container
+                    form
+                    .assignature-section
+                    .assignature-wrapper
+                    .assignature
+                    input {
+                    border: 0 !important;
+                    border-bottom: 1px solid #000000 !important;
+                    border-radius: 0 !important;
+                    background: transparent !important;
+                    height: 2.4rem !important;
+                    padding: 0 !important;
                 }
 
                 /* Garante que as bordas dos blocos (fieldset) não sumam */
@@ -45,8 +63,8 @@
                 }
             }
         </style>
-    <base target="_blank">
-</head>
+        <base target="_blank" />
+    </head>
     <body>
         <section class="s-form">
             <div class="container">
@@ -110,10 +128,10 @@
                                     </option>
                                     <option value="opt22">
                                         VITOR LIMA (144)
-                                    </option> 
+                                    </option>
                                     <option value="opt23">
                                         EDANIELA SANTOS (145)
-                                    </option>       
+                                    </option>
                                 </select>
                             </div>
                             <div class="input-wrapper">
@@ -149,11 +167,19 @@
                             <div class="cod-group">
                                 <div class="input-wrapper">
                                     <label for="cod-efetiva">COD EFTV</label>
-                                    <input type="text" name="cod-efetiva" id="cod-efetiva" placeholder="" />
+                                    <input
+                                        type="text"
+                                        name="cod-efetiva"
+                                        id="cod-efetiva"
+                                        placeholder="" />
                                 </div>
                                 <div class="input-wrapper">
                                     <label for="cod-dandux">COD DDX</label>
-                                    <input type="text" name="cod-dandux" id="cod-dandux" placeholder="" />
+                                    <input
+                                        type="text"
+                                        name="cod-dandux"
+                                        id="cod-dandux"
+                                        placeholder="" />
                                 </div>
                             </div>
                         </div>
@@ -264,22 +290,29 @@
                                         autocomplete="off"
                                         required />
                                     <datalist id="ramos">
-                                        <option value="18. BAR/BARRACA/BODEGA/ESPETINHO/PUB/TABERNA"></option>
+                                        <option
+                                            value="18. BAR/BARRACA/BODEGA/ESPETINHO/PUB/TABERNA"></option>
                                         <option value="17. BUFFET/CATERING"></option>
                                         <option value="16. CASA DE FRIOS"></option>
-                                        <option value="15. CASA DE SHOWS/CINEMA/TEATRO"></option>
+                                        <option
+                                            value="15. CASA DE SHOWS/CINEMA/TEATRO"></option>
                                         <option value="14. CPF"></option>
-                                        <option value="13. RESTAURANTE/CHURRASCARIA/PIZZARIA"></option>
-                                        <option value="12. CAFETERIA/CONVENIÊNCIA/PADARIA"></option>
-                                        <option value="11. LANCHONETE/PASTELARIA/QUIOSQUE"></option>
+                                        <option
+                                            value="13. RESTAURANTE/CHURRASCARIA/PIZZARIA"></option>
+                                        <option
+                                            value="12. CAFETERIA/CONVENIÊNCIA/PADARIA"></option>
+                                        <option
+                                            value="11. LANCHONETE/PASTELARIA/QUIOSQUE"></option>
                                         <option value="10. DELICATESSEN"></option>
                                         <option value="9. EMPÓRIOS"></option>
                                         <option value="8. HORTIFRUTI"></option>
                                         <option value="7. HIPERMERCADOS"></option>
                                         <option value="6. SUPERMERCADOS"></option>
                                         <option value="5. MERCADOS MÉDIOS"></option>
-                                        <option value="4. MERCADINHOS/MERCEARIA"></option>
-                                        <option value="3. ALBERGUE/FLAT/HOTEIS/POUSADAS"></option>
+                                        <option
+                                            value="4. MERCADINHOS/MERCEARIA"></option>
+                                        <option
+                                            value="3. ALBERGUE/FLAT/HOTEIS/POUSADAS"></option>
                                         <option value="2. ARMAZÉM"></option>
                                         <option value="1. ATACADOS"></option>
                                     </datalist>
@@ -430,13 +463,17 @@
                                 <label for="gerencia-comercial"
                                     >GERÊNCIA COMERCIAL</label
                                 >
-                                <input type="text" name="gerencia-comercial" />
+                                <input
+                                    type="text"
+                                    name="gerencia-comercial" />
                             </div>
                             <div class="assignature">
                                 <label for="gerencia-financeira"
                                     >GERÊNCIA FINANCEIRA</label
                                 >
-                                <input type="text" name="gerencia-financeira" />
+                                <input
+                                    type="text"
+                                    name="gerencia-financeira" />
                             </div>
                         </div>
                     </fieldset>

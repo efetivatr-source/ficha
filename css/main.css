@@ -13,7 +13,6 @@
    9. Responsivo (somente tela)
    ========================================================================== */
 
-
 /* ==========================================================================
    1. VARIÁVEIS
    ========================================================================== */
@@ -36,9 +35,8 @@
     --pad-x: 3.2rem;
     --control-h: 3rem;
     --form-w: 68.8rem;
-    --rule-h: 31px; /* altura de cada linha do parecer */
+    --rule-h: 31px;
 }
-
 
 /* ==========================================================================
    2. RESET E BASE
@@ -65,7 +63,6 @@ img {
     max-width: 100%;
 }
 
-/* fieldset tem min-width: min-content por padrão, o que impede de encolher */
 fieldset {
     min-width: 0;
 }
@@ -81,7 +78,6 @@ label {
     margin: 0 auto;
     padding: 0 1.5rem;
 }
-
 
 /* ==========================================================================
    3. CONTROLES
@@ -118,25 +114,20 @@ button {
     font: inherit;
 }
 
-/* Foco visível sem mudar o tamanho da borda (não "pula" o layout) */
 :where(input, select, textarea, button):focus-visible {
     outline: 2px solid var(--ink);
     outline-offset: 1px;
 }
 
-
 /* ==========================================================================
    4. BLOCOS REUTILIZÁVEIS
    ========================================================================== */
-
-/* Card com borda fina */
 .border-box {
     border: var(--line-thin);
     border-radius: var(--radius);
     background: var(--paper);
 }
 
-/* Campo: label em cima, controle embaixo */
 .input-wrapper {
     display: flex;
     flex-direction: column;
@@ -148,7 +139,6 @@ button {
     text-align: center;
 }
 
-/* Linha de campos: colunas de mesma largura */
 .input-group {
     display: flex;
     gap: var(--gap-lg);
@@ -158,7 +148,6 @@ button {
     flex: 1 1 0;
 }
 
-/* Cabeçalho de seção: [ vazio | TÍTULO | ação à direita ] */
 .info-head {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -173,7 +162,6 @@ button {
     white-space: nowrap;
 }
 
-/* Campo "DATA" ao lado do título (Financeiro e bloco de histórico) */
 .info-head > .input-wrapper {
     grid-column: 3;
     justify-self: end;
@@ -184,7 +172,6 @@ button {
 .info-head > .input-wrapper input {
     width: 7rem;
 }
-
 
 /* ==========================================================================
    5. PÁGINA E TÍTULO
@@ -228,7 +215,6 @@ button {
     background-color: var(--accent);
 }
 
-
 /* ==========================================================================
    6. SEÇÕES DA FICHA
    ========================================================================== */
@@ -256,7 +242,6 @@ button {
     width: 14rem;
 }
 
-
 /* --- 6.2 Informações do cliente ----------------------------------------- */
 .info-section,
 .title-01-section {
@@ -268,7 +253,6 @@ button {
     padding-bottom: var(--gap-md);
 }
 
-/* Cabeçalho da seção: título centralizado + CODs à direita, com divisória */
 .info-section .info-head {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -285,7 +269,6 @@ button {
     letter-spacing: 0.08em;
 }
 
-/* Caixinha sutil que agrupa os dois COD */
 .info-section .info-head .cod-group {
     grid-column: 3;
     justify-self: end;
@@ -310,23 +293,21 @@ button {
 }
 
 .info-section .info-head .cod-group input {
-    width: 9rem;
+    width: 10rem;
     height: 3rem;
     font-size: 1.4rem;
     background: var(--field);
 }
-/* Linhas de campos */
+
 .info-section .input-group,
 .info-section .four-columns {
     margin-bottom: var(--gap-sm);
 }
 
-/* Linha com 3 campos (CNPJ / Data de abertura / Cidade) */
 .info-section .input-group:has(> :nth-child(3)) {
     gap: 5.7rem;
 }
 
-/* Grupo dentro de grupo (CEP + Bairro) e linha "responsável / telefone / ramo" */
 .info-section .input-group .input-group,
 .info-section .four-columns .input-group {
     flex: 1 1 0;
@@ -339,25 +320,21 @@ button {
     gap: var(--gap-lg);
 }
 
-
 /* --- 6.3 Sugestão de crédito -------------------------------------------- */
 .title-01-section .input-group {
     width: 100%;
 }
-
 
 /* --- 6.4 Histórico (title-02) e Financeiro (title-03) ------------------- */
 .two-columns {
     margin-bottom: var(--gap-lg);
 }
 
-/* Quando o bloco de histórico é exibido, as duas seções ficam lado a lado */
 .two-columns.active {
     display: flex;
     gap: var(--gap-md);
 }
 
-/* Histórico: escondido até receber .active */
 .title-02-section {
     display: flex;
     flex-direction: column;
@@ -386,7 +363,6 @@ button {
     gap: var(--gap-md);
 }
 
-/* Financeiro */
 .title-03-section {
     display: flex;
     flex-direction: column;
@@ -410,7 +386,6 @@ button {
     gap: var(--gap-md);
 }
 
-/* Botões SIM / NÃO */
 .btn-area {
     display: flex;
     width: 100%;
@@ -431,7 +406,6 @@ button {
     color: var(--paper);
 }
 
-/* Com o histórico aberto, o Financeiro fica mais estreito */
 .title-03-section.active .input-group {
     gap: var(--gap-sm);
 }
@@ -443,7 +417,6 @@ button {
 .title-03-section.active .toggle-button {
     flex: 0 0 5rem;
 }
-
 
 /* ==========================================================================
    7. RODAPÉ DA FICHA
@@ -459,7 +432,6 @@ button {
     text-transform: uppercase;
 }
 
-/* Textarea com pautas (linhas) */
 .parecer-section textarea {
     display: block;
     width: 100%;
@@ -524,10 +496,8 @@ button {
     text-align: center;
 }
 
-
 /* ==========================================================================
    8. IMPRESSÃO
-   (o <style> do HTML já força bordas e cores; aqui ficam só os ajustes de layout)
    ========================================================================== */
 @media print {
     @page {
@@ -535,7 +505,6 @@ button {
         margin: 8mm;
     }
 
-    /* Escala global: 60% (antes estava 55%, exagerado) */
     html {
         font-size: 60%;
     }
@@ -595,7 +564,6 @@ button {
         font-weight: 700;
     }
 
-    /* Parecer do crédito */
     .parecer-section {
         margin-bottom: 0.8rem;
     }
@@ -617,7 +585,6 @@ button {
         background-size: 100% auto;
     }
 
-    /* Assinaturas */
     .assignature-section {
         margin-bottom: 1rem;
     }
@@ -634,10 +601,11 @@ button {
         background: transparent;
     }
 
-    /* Aviso final */
     .s-form .container .warning {
-        font-size: 0.65rem;
+        font-size: 0.9rem;
         margin-bottom: 0;
+        color: var(--alert);
+        text-align: center;
     }
 
     select {
@@ -648,7 +616,7 @@ button {
 }
 
 /* ==========================================================================
-   9. RESPONSIVO (somente tela, para não interferir na impressão)
+   9. RESPONSIVO (somente tela)
    ========================================================================== */
 @media screen and (max-width: 725px) {
     .reason-section {
@@ -674,7 +642,6 @@ button {
 }
 
 @media screen and (max-width: 555px) {
-    /* Campos empilhados */
     .info-section .input-group,
     .title-01-section .input-group {
         flex-direction: column;
@@ -682,7 +649,6 @@ button {
         gap: var(--gap-sm);
     }
 
-    /* ...mas pares curtos continuam lado a lado (CEP+Bairro, Responsável+Telefone) */
     .info-section .input-group .input-group,
     .info-section .four-columns .input-group {
         flex-direction: row;
@@ -724,13 +690,10 @@ button {
         max-width: 22.4rem;
     }
 
-    /* COD EFTV / COD DDX descem para baixo do título, mantendo a caixinha */
     .info-section .info-head {
         grid-template-columns: 1fr;
         justify-items: center;
         gap: var(--gap-sm);
-        padding-bottom: 0.8rem;
-        margin-bottom: var(--gap-sm);
     }
 
     .info-section .info-head :is(h3, .cod-group) {
@@ -739,7 +702,6 @@ button {
     }
 
     .info-section .info-head .cod-group {
-        padding: 0.8rem 1.6rem;
         gap: 2.4rem;
     }
 
@@ -753,12 +715,14 @@ button {
     }
 }
 
-.info-section .info-head .cod-group {
-    gap: 2rem;
-}
+@media screen and (max-width: 360px) {
+    .info-section .info-head .cod-group {
+        gap: 1.6rem;
+    }
 
-.info-section .info-head .cod-group input {
-    width: 10rem;
+    .info-section .info-head .cod-group input {
+        width: 8rem;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
