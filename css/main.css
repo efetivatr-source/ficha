@@ -530,15 +530,14 @@ button {
    (o <style> do HTML já força bordas e cores; aqui ficam só os ajustes de layout)
    ========================================================================== */
 @media print {
-    /* Define a página A4 com margem pequena */
     @page {
         size: A4 portrait;
         margin: 8mm;
     }
 
-    /* Reduz a escala geral em 12% (de 62.5% para 55%) */
+    /* Escala global: 60% (antes estava 55%, exagerado) */
     html {
-        font-size: 55%;
+        font-size: 60%;
     }
 
     .s-form {
@@ -551,64 +550,44 @@ button {
     }
 
     .title-form h1 {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 
-    .title-form .line::after {
-        bottom: 0.6rem;
-    }
-
-    /* Bloco de data / supervisor / representante / motivo */
     .reason-section {
-        padding: 0.8rem var(--pad-x);
+        padding: 1rem var(--pad-x);
         margin-bottom: 0.6rem;
         gap: 1.6rem;
         flex-wrap: nowrap;
     }
 
-    .reason-section .input-group {
-        gap: var(--gap-sm);
-    }
-
-    /* Seções principais */
     .info-section,
     .title-01-section {
-        padding: 0.6rem var(--pad-x) 0;
-        margin-bottom: 0.6rem;
-    }
-
-    .info-section .info-head {
-        margin-bottom: 0.4rem;
+        padding: 0.8rem var(--pad-x) 0;
+        margin-bottom: 0.8rem;
     }
 
     .info-section .input-group,
     .info-section .four-columns {
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.8rem;
     }
 
-    /* Bloco histórico + financeiro */
     .two-columns {
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.8rem;
     }
 
     .two-columns.active {
         flex-wrap: nowrap;
     }
 
-    .title-02-section {
-        height: 9rem;
-    }
-
+    .title-02-section,
     .title-03-section {
-        height: 9rem;
+        height: 10rem;
     }
 
-    /* Histórico só sai na impressão se estiver ativo */
     .title-02-section:not(.active) {
         display: none;
     }
 
-    /* Botão SIM/NÃO ativo: borda grossa, sem fundo preto */
     .toggle-button.active {
         border: 3px solid var(--ink);
         background: var(--field);
@@ -618,7 +597,7 @@ button {
 
     /* Parecer do crédito */
     .parecer-section {
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.8rem;
     }
 
     .parecer-section h3 {
@@ -626,45 +605,47 @@ button {
     }
 
     .parecer-section textarea {
-        height: 8rem;
-        line-height: 22px;
+        height: 9rem;
         font-size: 1.2rem;
+        line-height: 24px;
         background-image: repeating-linear-gradient(
             transparent,
-            transparent 21px,
-            var(--ink) 21px,
-            var(--ink) 22px
+            transparent 23px,
+            var(--ink) 23px,
+            var(--ink) 24px
         );
         background-size: 100% auto;
     }
 
     /* Assinaturas */
     .assignature-section {
-        margin-bottom: 0.4rem;
+        margin-bottom: 1rem;
     }
 
     .assignature-wrapper {
-        gap: 6rem;
+        gap: 8rem;
     }
 
     .assignature input {
         height: 2.4rem;
+        border: 0;
+        border-bottom: 1px solid var(--ink);
+        border-radius: 0;
+        background: transparent;
     }
 
     /* Aviso final */
     .s-form .container .warning {
-        font-size: 0.55rem;
+        font-size: 0.65rem;
         margin-bottom: 0;
     }
 
-    /* Remove a seta do select */
     select {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
     }
 }
-
 
 /* ==========================================================================
    9. RESPONSIVO (somente tela, para não interferir na impressão)
