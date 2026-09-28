@@ -200,22 +200,25 @@ select {
 
 /* =========================================================
    CABEÇALHO DAS INFORMAÇÕES DO CLIENTE
+   Linha 1: título centralizado
+   Linha 2: COD EFTV / COD DDX alinhados à direita
    ========================================================= */
 
 .s-form .container form .info-section .info-head {
-    position: relative;
-
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
     justify-content: center;
 
     width: 100%;
-    min-height: 4.8rem;
+
+    gap: 1rem;
 
     margin-top: 0.9rem;
     margin-bottom: 0.8rem;
 
-    padding: 0 1rem;
+    /* mesmo recuo lateral dos campos abaixo */
+    padding: 0 3.2rem;
 }
 
 
@@ -241,19 +244,16 @@ select {
    ========================================================= */
 
 .s-form .container form .info-section .info-head .cod-group {
-    position: absolute;
-
-    top: 50%;
-    right: 1rem;
-
-    transform: translateY(-50%);
+    position: static;
+    transform: none;
 
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
 
     gap: 1.6rem;
-
-    z-index: 2;
 }
 
 
@@ -898,31 +898,16 @@ select {
 
     /* -----------------------------------------
        CABEÇALHO DOS CÓDIGOS NO MOBILE
+       (mesma estrutura, só centraliza os códigos)
        ----------------------------------------- */
 
     .s-form .container form .info-section .info-head {
-        flex-direction: column;
-
-        align-items: center;
-
-        min-height: auto;
+        padding: 0.8rem 1rem;
 
         gap: 1rem;
-
-        padding: 0.8rem 1rem;
-    }
-
-    .s-form .container form .info-section .info-head h3 {
-        width: 100%;
     }
 
     .s-form .container form .info-section .info-head .cod-group {
-        position: static;
-
-        transform: none;
-
-        width: 100%;
-
         justify-content: center;
 
         flex-wrap: wrap;
@@ -1008,10 +993,6 @@ select {
    ========================================================= */
 
 @media (max-width: 360px) {
-
-    .s-form .container form .info-section .info-head {
-        margin-left: 0;
-    }
 
     .s-form .container form .info-section .info-head .cod-group {
         gap: 0.8rem;
@@ -1164,35 +1145,31 @@ select {
 
 
     /* -----------------------------------------
-       COD EFTV / COD DDX
+       INFORMAÇÕES DO CLIENTE / COD EFTV / COD DDX
+       (mesma estrutura da tela: título em cima,
+        códigos à direita embaixo)
        ----------------------------------------- */
 
     .s-form .container form .info-section .info-head {
-        position: relative;
+        flex-direction: column;
+        align-items: stretch;
 
-        min-height: 4.8rem;
+        padding: 0 3.2rem;
+
+        gap: 0.8rem;
     }
 
     .s-form .container form .info-section .info-head .cod-group {
-        position: absolute;
+        position: static;
+        transform: none;
 
-        top: 50%;
-        right: 1rem;
-
-        transform: translateY(-50%);
-
-        display: flex;
-        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
 
         gap: 1.6rem;
-
-        z-index: 2;
     }
 
     .s-form .container form .info-section .info-head .cod-group .input-wrapper {
-        display: flex;
-        align-items: center;
-
         gap: 0.6rem;
 
         margin: 0;
