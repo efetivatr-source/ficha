@@ -268,33 +268,27 @@ button {
     padding-bottom: var(--gap-md);
 }
 
-.info-section .info-head {
-    margin-bottom: var(--gap-sm);
-}
-
-.title-01-section .info-head {
-    margin-bottom: var(--gap-xs);
-}
-
-/* COD EFTV / COD DDX: label em cima, igual aos demais campos */
 .info-section .info-head .cod-group {
     grid-column: 3;
     justify-self: end;
     display: flex;
     align-items: flex-end;
-    gap: var(--gap-sm);
+    gap: 2.4rem;              /* ← mais espaço ENTRE os dois campos */
 }
 
 .info-section .info-head .cod-group .input-wrapper {
-    gap: 0.2rem;
+    gap: 0.4rem;              /* ← mais espaço entre label e input */
 }
 
 .info-section .info-head .cod-group label {
     white-space: nowrap;
+    font-size: 1.3rem;        /* ← label um pouco maior */
 }
 
 .info-section .info-head .cod-group input {
-    width: 7rem;
+    width: 10rem;             /* ← campo mais largo (era 7rem) */
+    height: 3.4rem;           /* ← campo mais alto (era 3rem padrão) */
+    font-size: 1.4rem;        /* ← texto digitado um pouco maior */
 }
 
 /* Linhas de campos */
