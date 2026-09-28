@@ -95,17 +95,13 @@ button {
     font-size: 1.4rem;
     text-transform: uppercase;
 }
-/* ============================================================
-   ALTERAÇÃO 1: substitui o antigo .input-wrapper do info-head
-   pelo .cod-group com dois campos (COD EFTV / COD DDX)
-   ============================================================ */
 .s-form .container form .info-section .info-head .cod-group {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    gap: 2rem;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 1rem;
 }
 .s-form .container form .info-section .info-head .cod-group .input-wrapper {
     display: flex;
@@ -113,18 +109,17 @@ button {
     gap: 0.6rem;
 }
 .s-form .container form .info-section .info-head .cod-group .input-wrapper label {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin: 0;
     white-space: nowrap;
+    text-transform: uppercase;
 }
 .s-form .container form .info-section .info-head .cod-group .input-wrapper input {
-    max-width: 7rem;
-    width: 100%;
+    width: 8rem;
+    max-width: 8rem;
     margin: 0;
+    text-align: center;
 }
-/* ============================================================
-   FIM DA ALTERAÇÃO 1
-   ============================================================ */
 .s-form .container form .info-section .input-group {
     padding: 0 3.2rem;
     display: flex;
@@ -643,9 +638,6 @@ button {
         max-width: 22.4rem;
         width: 100%;
     }
-    /* ============================================================
-       ALTERAÇÃO 2: em telas pequenas, empilha os dois COD
-       ============================================================ */
     .s-form .container form .info-section .info-head {
         flex-direction: column;
         align-items: flex-start;
@@ -655,28 +647,24 @@ button {
         position: static;
         width: 100%;
         justify-content: center;
+        padding: 0;
     }
-    /* ============================================================
-       FIM DA ALTERAÇÃO 2
-       ============================================================ */
     .s-form .container form .assignature-section .assignature-wrapper {
         gap: 3.4rem;
         flex-wrap: wrap;
     }
 }
 @media (max-width: 360px) {
-    /* ============================================================
-       ALTERAÇÃO 3: ajuste fino para telas muito pequenas
-       ============================================================ */
     .s-form .container form .info-section .info-head {
         margin-left: 0;
     }
+    .s-form .container form .info-section .info-head .cod-group {
+        gap: 1rem;
+    }
     .s-form .container form .info-section .info-head .cod-group .input-wrapper input {
+        width: 6rem;
         max-width: 6rem;
     }
-    /* ============================================================
-       FIM DA ALTERAÇÃO 3
-       ============================================================ */
 }
 @media print {
     .s-form {
@@ -790,9 +778,6 @@ button {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
-    /* ============================================================
-       ALTERAÇÃO 4: garante os dois COD na impressão
-       ============================================================ */
     .s-form .container form .info-section .info-head .cod-group {
         position: absolute;
         top: 0;
@@ -801,9 +786,6 @@ button {
     .s-form .container form .info-section .info-head .cod-group .input-wrapper input {
         border: 1px solid #000 !important;
     }
-    /* ============================================================
-       FIM DA ALTERAÇÃO 4
-       ============================================================ */
     .s-form .container .warning {
         margin-bottom: 0;
     }
