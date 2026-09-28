@@ -273,24 +273,24 @@ button {
     justify-self: end;
     display: flex;
     align-items: flex-end;
-    gap: 2.4rem;              /* ← mais espaço ENTRE os dois campos */
+    gap: 4rem;                /* ← mais espaço ENTRE os dois campos */
 }
 
 .info-section .info-head .cod-group .input-wrapper {
-    gap: 0.4rem;              /* ← mais espaço entre label e input */
+    gap: 0.8rem;              /* ← mais espaço entre label e input */
 }
 
 .info-section .info-head .cod-group label {
     white-space: nowrap;
-    font-size: 1.3rem;        /* ← label um pouco maior */
+    font-size: 1.4rem;        /* ← label maior */
+    font-weight: 500;
 }
 
 .info-section .info-head .cod-group input {
-    width: 10rem;             /* ← campo mais largo (era 7rem) */
-    height: 3.4rem;           /* ← campo mais alto (era 3rem padrão) */
-    font-size: 1.4rem;        /* ← texto digitado um pouco maior */
+    width: 13rem;             /* ← campo bem mais largo */
+    height: 3.8rem;           /* ← campo mais alto */
+    font-size: 1.6rem;        /* ← texto digitado maior */
 }
-
 /* Linhas de campos */
 .info-section .input-group,
 .info-section .four-columns {
@@ -655,14 +655,12 @@ button {
     }
 }
 
-@media screen and (max-width: 360px) {
-    .info-section .info-head .cod-group {
-        gap: var(--gap-md);
-    }
+.info-section .info-head .cod-group {
+    gap: 2rem;
+}
 
-    .info-section .info-head .cod-group input {
-        width: 8rem;
-    }
+.info-section .info-head .cod-group input {
+    width: 10rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
