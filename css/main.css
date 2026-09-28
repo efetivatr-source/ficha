@@ -95,30 +95,17 @@ button {
     font-size: 1.4rem;
     text-transform: uppercase;
 }
-.s-form .container form .info-section .info-head .cod-group {
+.s-form .container form .info-section .info-head .input-wrapper {
     display: flex;
     align-items: center;
-    gap: 2rem;
     position: absolute;
     top: 0;
-    right: 1rem;
+    right: 0;
 }
-.s-form .container form .info-section .info-head .cod-group .input-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-}
-.s-form .container form .info-section .info-head .cod-group .input-wrapper label {
-    font-size: 1.2rem;
-    margin: 0;
-    white-space: nowrap;
-    text-transform: uppercase;
-}
-.s-form .container form .info-section .info-head .cod-group .input-wrapper input {
-    width: 8rem;
-    max-width: 8rem;
-    margin: 0;
-    text-align: center;
+.s-form .container form .info-section .info-head .input-wrapper input {
+    max-width: 8.4rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
 }
 .s-form .container form .info-section .input-group {
     padding: 0 3.2rem;
@@ -639,15 +626,8 @@ button {
         width: 100%;
     }
     .s-form .container form .info-section .info-head {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.8rem;
-    }
-    .s-form .container form .info-section .info-head .cod-group {
-        position: static;
-        width: 100%;
-        justify-content: center;
-        padding: 0;
+        justify-content: space-between;
+        margin-left: 3.2rem;
     }
     .s-form .container form .assignature-section .assignature-wrapper {
         gap: 3.4rem;
@@ -656,14 +636,10 @@ button {
 }
 @media (max-width: 360px) {
     .s-form .container form .info-section .info-head {
-        margin-left: 0;
+        margin-left: 1rem;
     }
-    .s-form .container form .info-section .info-head .cod-group {
-        gap: 1rem;
-    }
-    .s-form .container form .info-section .info-head .cod-group .input-wrapper input {
-        width: 6rem;
-        max-width: 6rem;
+    .s-form .container form .info-section .info-head .input-wrapper input {
+        margin-left: 0.8rem;
     }
 }
 @media print {
@@ -777,14 +753,6 @@ button {
         background-size: 100% auto;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-    }
-    .s-form .container form .info-section .info-head .cod-group {
-        position: absolute;
-        top: 0;
-        right: 1rem;
-    }
-    .s-form .container form .info-section .info-head .cod-group .input-wrapper input {
-        border: 1px solid #000 !important;
     }
     .s-form .container .warning {
         margin-bottom: 0;
