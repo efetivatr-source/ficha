@@ -268,28 +268,59 @@ button {
     padding-bottom: var(--gap-md);
 }
 
+/* Cabeçalho da seção: título centralizado + CODs à direita, com divisória */
+.info-section .info-head {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: var(--gap-lg);
+    padding-bottom: 0.8rem;
+    margin-bottom: var(--gap-sm);
+    border-bottom: 0.5px dashed rgba(0, 0, 0, 0.2);
+}
+
+.info-section .info-head h3 {
+    grid-column: 2;
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0.08em;
+}
+
+/* Caixinha sutil que agrupa os dois COD */
 .info-section .info-head .cod-group {
     grid-column: 3;
     justify-self: end;
     display: flex;
-    align-items: flex-end;
-    gap: 4rem;                /* ← mais espaço ENTRE os dois campos */
+    align-items: center;
+    gap: 2rem;
+    padding: 0.6rem 1.4rem;
+    background: rgba(0, 0, 0, 0.02);
+    border: 0.3px solid rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius);
 }
 
 .info-section .info-head .cod-group .input-wrapper {
-    gap: 0.8rem;              /* ← mais espaço entre label e input */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .info-section .info-head .cod-group label {
     white-space: nowrap;
-    font-size: 1.4rem;        /* ← label maior */
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #222;
 }
 
 .info-section .info-head .cod-group input {
-    width: 13rem;             /* ← campo bem mais largo */
-    height: 3.8rem;           /* ← campo mais alto */
-    font-size: 1.6rem;        /* ← texto digitado maior */
+    width: 9rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    background: var(--field);
 }
 /* Linhas de campos */
 .info-section .input-group,
@@ -637,16 +668,27 @@ button {
         max-width: 22.4rem;
     }
 
-    /* COD EFTV / COD DDX descem para baixo do título */
+    /* COD EFTV / COD DDX descem para baixo do título, mantendo a caixinha */
     .info-section .info-head {
         grid-template-columns: 1fr;
         justify-items: center;
-        gap: var(--gap-xs);
+        gap: var(--gap-sm);
+        padding-bottom: 0.8rem;
+        margin-bottom: var(--gap-sm);
     }
 
     .info-section .info-head :is(h3, .cod-group) {
         grid-column: 1;
         justify-self: center;
+    }
+
+    .info-section .info-head .cod-group {
+        padding: 0.8rem 1.6rem;
+        gap: 2.4rem;
+    }
+
+    .info-section .info-head .cod-group input {
+        width: 10rem;
     }
 
     .assignature-wrapper {
