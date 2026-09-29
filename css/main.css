@@ -82,31 +82,52 @@ button {
 .s-form .container form .info-section {
     margin-bottom: 1.2rem;
 }
+
+
+/* =========================================================
+   CABEÇALHO - INFORMAÇÕES DO CLIENTE
+   Linha 1: título centralizado
+   Linha 2: COD EFTV / COD DDX alinhados à direita
+   (sem position: absolute, evita sobreposição)
+   ========================================================= */
+
 .s-form .container form .info-section .info-head {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
     margin-top: 0.9rem;
-    position: relative;
     margin-bottom: 0.8rem;
+    padding: 0 3.2rem;
 }
 .s-form .container form .info-section .info-head h3 {
+    width: 100%;
     text-align: center;
     font-size: 1.4rem;
     text-transform: uppercase;
 }
-.s-form .container form .info-section .info-head .input-wrapper {
+.s-form .container form .info-section .info-head .cod-group {
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 0;
-    right: 0;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1.6rem;
 }
-.s-form .container form .info-section .info-head .input-wrapper input {
+.s-form .container form .info-section .info-head .cod-group .input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.s-form .container form .info-section .info-head .cod-group .input-wrapper label {
+    white-space: nowrap;
+    font-size: 1rem;
+}
+.s-form .container form .info-section .info-head .cod-group .input-wrapper input {
+    width: 8.4rem;
     max-width: 8.4rem;
-    margin-left: 2rem;
-    margin-right: 1rem;
 }
+
+
 .s-form .container form .info-section .input-group {
     padding: 0 3.2rem;
     display: flex;
@@ -603,6 +624,14 @@ button {
     .s-form .container .two-columns .title-03-section .mr-16 {
         margin-right: 0;
     }
+
+    /* Cabeçalho Informações do Cliente no tablet/mobile */
+    .s-form .container form .info-section .info-head {
+        padding: 0 1.6rem;
+    }
+    .s-form .container form .info-section .info-head .cod-group {
+        justify-content: center;
+    }
 }
 @media (max-width: 490px) {
     .s-form .container form .reason-section {
@@ -626,8 +655,11 @@ button {
         width: 100%;
     }
     .s-form .container form .info-section .info-head {
-        justify-content: space-between;
-        margin-left: 3.2rem;
+        gap: 0.6rem;
+        padding: 0 1rem;
+    }
+    .s-form .container form .info-section .info-head .cod-group {
+        gap: 0.8rem;
     }
     .s-form .container form .assignature-section .assignature-wrapper {
         gap: 3.4rem;
@@ -635,11 +667,15 @@ button {
     }
 }
 @media (max-width: 360px) {
-    .s-form .container form .info-section .info-head {
-        margin-left: 1rem;
+    .s-form .container form .info-section .info-head .cod-group {
+        gap: 0.6rem;
     }
-    .s-form .container form .info-section .info-head .input-wrapper input {
-        margin-left: 0.8rem;
+    .s-form .container form .info-section .info-head .cod-group .input-wrapper input {
+        width: 7rem;
+        max-width: 7rem;
+    }
+    .s-form .container form .info-section .info-head .cod-group .input-wrapper label {
+        font-size: 0.9rem;
     }
 }
 @media print {
@@ -761,6 +797,20 @@ button {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+    }
+
+    /* Cabeçalho Informações do Cliente na impressão */
+    .s-form .container form .info-section .info-head {
+        flex-direction: column;
+        padding: 0 3.2rem;
+    }
+    .s-form .container form .info-section .info-head .cod-group {
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+    }
+    .s-form .container form .info-section .info-head .cod-group .input-wrapper input {
+        border: 1px solid #000 !important;
+        background: #fff !important;
     }
 }
 .border-box {
